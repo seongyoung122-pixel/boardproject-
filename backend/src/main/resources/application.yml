@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: capture-board
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:boarddb}
+    username: ${DB_USER:board}
+    password: ${DB_PASSWORD:board123}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+
+# 캡처 이미지 저장 경로
+board:
+  upload:
+    path: ${UPLOAD_PATH:./uploads}

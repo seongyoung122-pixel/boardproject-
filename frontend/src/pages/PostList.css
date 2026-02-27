@@ -1,0 +1,141 @@
+.post-list {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  width: 220px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.search-btn {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.search-btn:hover {
+  background: var(--accent-hover);
+}
+
+.post-table {
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 60px 1fr 100px 140px;
+  padding: 1rem 1.25rem;
+  background: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.post-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 100px 140px;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.post-row:hover {
+  background: rgba(233, 69, 96, 0.08);
+}
+
+.col-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.capture-badge {
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.loading, .empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+.empty-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+}
+
+.empty-link:hover {
+  background: var(--accent-hover);
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}

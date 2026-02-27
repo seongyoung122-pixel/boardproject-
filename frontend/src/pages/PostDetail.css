@@ -1,0 +1,137 @@
+.post-detail {
+  width: 100%;
+}
+
+.post-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.post-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.btn-edit {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-edit:hover {
+  background: var(--border);
+}
+
+.btn-delete {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-delete:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.btn-back:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}
+
+.post-content {
+  margin-bottom: 2rem;
+}
+
+.post-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.captures-section {
+  margin-bottom: 2rem;
+}
+
+.captures-section h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.capture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.capture-item {
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.capture-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.capture-filename {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-footer {
+  margin-top: 1.5rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}

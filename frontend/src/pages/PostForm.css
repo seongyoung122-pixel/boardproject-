@@ -1,0 +1,136 @@
+.post-form {
+  width: 100%;
+}
+
+.post-form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.file-upload-area {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.file-upload-area:hover {
+  border-color: var(--accent);
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: block;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.file-list {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.remove-file {
+  background: none;
+  color: var(--accent);
+  font-size: 1.25rem;
+  padding: 0 0.5rem;
+  line-height: 1;
+}
+
+.remove-file:hover {
+  color: var(--accent-hover);
+}
+
+.form-error {
+  padding: 0.75rem;
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn-submit {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.btn-cancel:hover {
+  background: var(--border);
+}
