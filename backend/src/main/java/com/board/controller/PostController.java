@@ -29,7 +29,7 @@ public class PostController {
 
     private final PostService postService;
     private final FileStorageService fileStorageService;
-
+//테스트 주석 추가
     @GetMapping
     public ResponseEntity<Page<PostDto>> getPosts(
             @RequestParam(required = false) String keyword,
