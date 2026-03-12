@@ -83,13 +83,13 @@ public class PostController {
 
         return ResponseEntity.ok(postService.updatePost(id, dto, files));
     }
-
+//주석 테스트 소스 수정 깃테스트
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePost(@PathVariable Long id) {
         postService.deletePost(id);
         return ResponseEntity.noContent().build();
     }
-
+//깃테스트
     @GetMapping("/captures/{fileName:.+}")
     public ResponseEntity<Resource> getCapture(@PathVariable String fileName) {
         try {
