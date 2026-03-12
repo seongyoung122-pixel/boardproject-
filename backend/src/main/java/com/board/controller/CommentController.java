@@ -35,6 +35,8 @@ public class CommentController {
         return ResponseEntity.ok(commentService.updateComment(id, dto));
     }
 
+
+    //수정하기
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteComment(@PathVariable Long id) {
         commentService.deleteComment(id);
