@@ -89,7 +89,7 @@ public class PostController {
         postService.deletePost(id);
         return ResponseEntity.noContent().build();
     }
-//깃테스트
+//깃테스트11111
     @GetMapping("/captures/{fileName:.+}")
     public ResponseEntity<Resource> getCapture(@PathVariable String fileName) {
         try {
