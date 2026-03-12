@@ -1,6 +1,7 @@
 package com.board.service;
 
 import com.board.dto.CaptureDto;
+import com.board.dto.CommentDto;
 import com.board.dto.PostDto;
 import com.board.entity.Capture;
 import com.board.entity.Post;
@@ -113,6 +114,17 @@ public class PostService {
                         .build())
                 .collect(Collectors.toList());
 
+        List<CommentDto> commentDtos = post.getComments().stream()
+                .map(c -> CommentDto.builder()
+                        .id(c.getId())
+                        .postId(c.getPost().getId())
+                        .content(c.getContent())
+                        .author(c.getAuthor())
+                        .createdAt(c.getCreatedAt())
+                        .updatedAt(c.getUpdatedAt())
+                        .build())
+                .collect(Collectors.toList());
+
         return PostDto.builder()
                 .id(post.getId())
                 .title(post.getTitle())
@@ -121,6 +133,7 @@ public class PostService {
                 .createdAt(post.getCreatedAt())
                 .updatedAt(post.getUpdatedAt())
                 .captures(captureDtos)
+                .comments(commentDtos)
                 .build();
     }
 }
